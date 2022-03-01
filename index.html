@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/a9deb815db.js" crossorigin="anonymous"></script>
+    <title>Photo Resize</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="caption">RESIZE YOUR IMAGES</h1>
+        <div class="inputs">
+            <div class="pic-in">
+                <label for="add-pic" class="pic-label">
+                    <i class="fas fa-upload" id="add-logo"></i>
+                    <div class="preview" id="preview"></div>
+                </label>
+            <input type="file" name="add-pic" id="add-pic" class="add-pic" accept="image/*">
+        </div>
+    </div>
+
+    <div class="io">
+        <div class="inp-grid">
+            <div class="size-input width-box">
+                <label for="width">width</label>
+                <input type="number" min="1" class="width" id="width">
+            </div>
+            <div class="size-input height-box">
+                <label for="height">height</label>
+                <input type="number" min="1" class="height" id="height">
+            </div>
+            
+            <div class="lock-div lock-box">
+                <input type="checkbox" name="lock" id="lock">
+                <label for="lock" class="lock-lbl">
+                    <i class="fas fa-lock"></i>
+                    <i class="fas fa-lock-open"></i>
+                </label>
+            </div>
+            <div class="size-input unit-box">
+                <label for="nuit">unit</label>
+                <select name="unit" id="unit">
+                    <!-- <option value="percentage">percent</option> -->
+                    <option value="pixel">pixels</option>
+                </select>
+            </div>
+            <button class="resize-btn" id="resize-btn">Resize</button>
+        </div>
+        <div class="output" id="output">
+            <div class="op-img">
+            <canvas class="canvas" id="canvas" width="100px" height="100px"></canvas>
+        </div>
+            <button class="dwnld" id="download">Download <i class="fas fa-download"></i></button>
+            <select name="format" id="format">
+                <option value="jpeg">jpeg</option>
+                <option value="png">png</option>
+            </select>
+        </div>
+    </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
